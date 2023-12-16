@@ -1,0 +1,26 @@
+
+<!-- saved from url=(0092)https://www.pythonanywhere.com/user/malik01/files/home/malik01/mysite/templates/current.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "layout.html" %}
+    {% block content %}
+    
+   
+    <div class="container">
+     <div class="panel panel-default">
+     <div class="panel-body">
+     <div class="btn-group-vertical col-sm-6 btn-center">
+     
+      {% if message %}
+        {% for key , value in message.items() %}          
+           <a href="https://www.pythonanywhere.com/user/malik01/files/home/malik01/mysite/templates/current.html#" class="btn btn-primary btn-lg"> {{ key|safe }} : {{ value|safe }} </a>
+        {% endfor %}
+      {% endif %}
+   
+   
+     </div><!-- btn group--> 
+     </div><!-- panel body-->
+     </div><!-- panel -->
+    </div><!-- /.container -->
+ 
+    
+     {% endblock %}
+   </body></html>
