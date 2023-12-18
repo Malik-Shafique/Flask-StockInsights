@@ -1,0 +1,62 @@
+
+<!-- saved from url=(0090)https://www.pythonanywhere.com/user/malik01/files/home/malik01/mysite/templates/hello.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "layout.html" %}
+    {% block content %}
+   
+       
+    <div class="container my-5">
+     <div class="panel panel-default">
+     <div class="panel-body">
+    {% if message %}
+        {% for table in message %}          
+            {{ table|safe }}
+            <br>
+        {% endfor %}
+   {% endif %}
+   
+   {% for message in form.scripname.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.password.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      </div><!-- panel body-->
+    </div><!-- panel -->
+    </div><!-- /.container -->
+    
+   
+     <div class="container">
+     <div class="panel panel-default">
+     <div class="panel-body">
+    <form action="https://www.pythonanywhere.com/user/malik01/files/home/malik01/mysite/templates/hello.html" method="post">
+    <fieldset>
+            <legend>Scrip History</legend>
+            {{ form.hidden_tag() }}
+            
+            <div style="font-size:20px;" font-weight:bold;="" margin-left:150px;="">
+ 
+        <p>
+        
+               {{ form.scripname.label }}
+               {{ form.scripname }}
+               
+        
+        </p>
+        <p>
+            {{ form.password.label }}
+               {{ form.password }}
+        </p>
+        <p>
+           {{ form.submit(class_="btn btn-primary btn-lg") }}
+        </p>
+        </div></fieldset>
+        </form></div>
+    
+    </div><!-- panel -->
+    </div><!-- panel body -->
+    <!-- /.container -->
+    
+     {% endblock %}
+   </body></html>
