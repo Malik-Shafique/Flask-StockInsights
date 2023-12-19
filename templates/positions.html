@@ -1,0 +1,26 @@
+
+<!-- saved from url=(0094)https://www.pythonanywhere.com/user/malik01/files/home/malik01/mysite/templates/positions.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "layout.html" %}
+    {% block content %}
+    
+   
+    <div class="container">
+     <div class="panel panel-default">
+     <div class="panel-body">
+     <div class="btn-group-vertical col-sm-6 btn-center">
+     
+      
+        {% for row in df.itertuples() %}        
+           <a href="https://www.pythonanywhere.com/user/malik01/files/home/malik01/mysite/templates/positions.html#" class="btn btn-primary btn-lg"> {{ row.symbol|safe }} : {{ row.nos|safe }} :  {{ row.nos_curr|safe }} </a>
+        {% endfor %}
+   
+   
+   
+     </div><!-- btn group--> 
+     </div><!-- panel body-->
+     </div><!-- panel -->
+    </div><!-- /.container -->
+ 
+    
+     {% endblock %}
+   </body></html>
